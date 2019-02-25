@@ -1,1 +1,2 @@
 # JS zadanie 001
+# Zadanie polegało na przygotowaniu programu, który obliczy i pokaże zakres pomiędzy wskazanymi liczbami, niezależnie od tego która z nich będzie większa. Dodatkowo program musi rozróżnić czy użytkownik podał liczbę w każdym polu. Jeśli tak się nie stało musi wyświetlić komunikt z wskazaniem błędu.
