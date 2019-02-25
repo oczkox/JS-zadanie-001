@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+    function wypisz()
+    {
+        const liczba1 = document.getElementById("pole1").value;
+        const liczba2 = document.getElementById("pole2").value;
+        let napis = "";
+
+        if((isNaN(liczba1))&&(isNaN(liczba2))){
+            napis = "w obu polach to nie są liczb. Podaj liczby.";
+        }
+        else if (isNaN(liczba1)){
+            napis = "W polu1 to niestety nie jest liczba. Podaj liczbę.";
+        }
+        else if(isNaN(liczba2)){
+            napis = "W polu2 to niestety nie jest liczba. Podaj liczbę.";
+        }
+        else if (liczba1 < liczba2){
+            for (i=liczba1; i<=liczba2; i++){
+                napis = napis + i + " ";
+                }
+        } else if (liczba1 > liczba2){
+            for (i=liczba1; i>=liczba2; i--){
+                napis = napis + i + " ";
+                }
+        } else if (liczba1 == "" || liczba2 == ""){
+            napis = "Jedno albo oba pole są puste. Podaj liczbę lub liczby."
+        }
+        else {
+            napis = "Liczby mają tę samą wartość";
+        }
+        document.getElementById("wynik").innerHTML = napis;
+    }
+    </script>
+</head>
+
+<body>
+    <div style="max-width: 900px;">Zadanie polegało na przygotowaniu programu, który obliczy i pokaże zakres pomiędzy wskazanymi liczbami, niezależnie od tego która z nich będzie większa. Dodatkowo program musi rozróżnić czy użytkownik podał liczbę w każdym polu. Jeśli tak się nie stało musi wyświetlić komunikt z wskazaniem błędu.</div>
+    <input type="text" id="pole1">
+    <input type="text" id="pole2">
+    <input type="submit" value="Pokaż" onclick="wypisz()">
+
+    <div id="wynik"></div>
+</body>
+</html>
